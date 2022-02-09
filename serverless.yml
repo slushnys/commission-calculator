@@ -1,0 +1,22 @@
+service: commission-calculator
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-1
+  stage: dev
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+
+functions:
+  create:
+    handler: src/functions/commission-calculator/index.handler
+    events:
+      - http:
+          path: comission-calculator/calculate
+          method: post
+          cors: true
