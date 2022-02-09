@@ -8,6 +8,7 @@ I wanted to go through a simple way possible for small amount of rules and make 
 * Logger - logging things across functionality could be a big bonus
 * Middlewares - separate input validation, parsing etc into middlewares.
 * Infrastructure - to provision infrastructure with terraform 
+* Parser - a more improved and extensive parser
 
 ## Running the application
 
@@ -38,3 +39,5 @@ When the service is started, you can query the endpoint by using the outputed UR
 ```
 curl -d '{"amount": 500, "client_id": "1", "date":"2021-01-01", "currency": "EUR"}' http://localhost:3000/dev/comission-calculator/calculate
 ```
+
+NOTE: Keep in mind that due to this implementation not having a database, repetitive requests of certain amount for a customer ID won't be accumulated, therefore, it won't apply rules that require monthly volume of transactions.
