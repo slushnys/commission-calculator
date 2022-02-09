@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "typeRoots": [
+            "./typings",
+            "./node_modules/@types"
+        ],
+        "target": "es2020",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "alwaysStrict": true,
+        "esModuleInterop": true,
+        "importHelpers": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "strictNullChecks": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "strict": true,
+        "declaration": true,
+        "resolveJsonModule": true
+    },
+    "exclude": [
+        "node_modules",
+    ],
+    "include": [
+        "src/**/*.ts",
+        "src/**/.*.ts",
+        "*.json",
+        ".*.json",
+        "*.ts",
+        "*.js",
+        ".eslintrc.js"
+    ],
+}
