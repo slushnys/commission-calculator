@@ -93,6 +93,7 @@ I wanted to go through a simple way possible for small amount of rules and make 
 * Database - Currently there's a test where it acts as "transaction storage" database for monthly storages of transaction sums. Database would be better usage, but due to limits of time, I haven't implemented it here.
 * Logger - logging things across functionality could be a big bonus
 * Middlewares - separate input validation, parsing etc into middlewares.
+* Infrastructure - to provision infrastructure with terraform 
 
 ## Running the application
 

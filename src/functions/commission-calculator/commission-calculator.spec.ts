@@ -54,9 +54,14 @@ describe('commission-calculator', () => {
             ['1', '2021-02-02', 500.0, 'EUR', 2.5],
             ['1', '2021-02-03', 500.0, 'EUR', 0.03],
             ['1', '2021-02-04', 500.0, 'EUR', 0.03],
+            ['1', '2021-03-05', 500.0, 'EUR', 2.5],
+            ['42', '2021-03-05', 1000.0, 'EUR', 0.05],
+            ['42', '2021-03-05', 500.0, 'EUR', 0.03],
+            ['33', '2021-03-05', 500.0, 'EUR', 0.02],
         ])(
             'tests transactions for client %s on date %s with amount %s (%s) expecting %s',
             async (clientId, date, amount, currency, expectedCommission) => {
+                console.log('clients', clients)
                 const commissionCalculator = makeCommissionCalculator({
                     clients,
                     currencyRateConnector: currencyRateConnector as any as CurrencyConnector,
